@@ -15,15 +15,16 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - xml (enabled by default - don't turn it off)
 ## Setup
 
-git clone [https://github.com/nutfyb/short-url.git](https://github.com/nutfyb/short-url.git)
-import DB shorttest.sql from short-url/shorttest.sql to xampp
-enter app/Config/Database.php set up when needed.
-rename env to .env
-cd short-url
-composer require codeigniter4/framework
-composer update
-php spark serve
-open url localhost:8080
+- git clone [https://github.com/nutfyb/short-url.git](https://github.com/nutfyb/short-url.git)
+- swicth branch main to master.
+- import DB shorttest.sql from short-url/shorttest.sql to xampp
+- enter app/Config/Database.php set up when needed.
+- rename env to .env
+- cd short-url
+- composer require codeigniter4/framework
+- composer update
+- php spark serve
+- open url localhost:8080
 
 
 ## Thanks
