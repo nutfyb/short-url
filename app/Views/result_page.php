@@ -18,7 +18,7 @@
 
 <body>
     <section><?php esc('template/header')  ?></section>
-    <div class="container" style="height: 40rem;">
+    <div class="container" style="height: 100%;">
         <div class="row">
             <div class="col-6 box_1">
                 <form>
@@ -33,10 +33,12 @@
                             <div class="col-2">
                                 <h6>Full URL :</h6>
                             </div>
-                            <div class="col-10"><a href="<?php echo ($fullurl) ?>" target="_blank"><?php echo ($fullurl) ?></a></div>
+                            <div class="col-10"><textarea  type="text" style="width: 70%;" disabled><?php echo ($fullurl) ?></textarea></div>
                         </div>
-                        <input id="text" type="text" value="<?php echo ($fullurl) ?>" style="width:80%" hidden>
-                        <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+                        <div class="container" style="height: 10rem;">
+                            <input id="text" type="text" value="<?php echo ($fullurl) ?>" style="width:80%" hidden>
+                            <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+                        </div>
                         <div class="row">
                             <a class="col-2" target="_blank" href="/history"><input class="btn btn-qr text-white mt-3 col-3" style="width: 100%;" type="button" value="History"></a>
                         </div>
@@ -48,6 +50,7 @@
             </div>
         </div>
     </div>
+    <div class="container" style="height: 5rem;width:5rem;"></div>
     <section><?php esc('template/footer')  ?></section>
 </body>
 <script>
@@ -66,8 +69,8 @@
 </script>
 <script type="text/javascript">
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width: 100,
-        height: 100
+        width: 150,
+        height: 150
     });
 
     function makeCode() {
@@ -94,4 +97,5 @@
         }
     });
 </script>
+
 </html>
