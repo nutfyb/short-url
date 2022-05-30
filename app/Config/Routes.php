@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'urlcon::index');
 $routes->get('result_page', 'urlcon::result');
 $routes->get('history', 'urlcon::urlhistory');
-$routes->get('qrcodetext', 'urlcon::qrcodeGenerate');
+$routes->get('qrcodetext', 'urlcon::qrcode');
+$routes->post('qrcode-Generate', 'urlcon::qrcodeGenerate');
 $routes->post('submit-form', 'urlcon::shorten_url');
 
 /*
