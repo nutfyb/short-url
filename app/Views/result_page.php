@@ -22,15 +22,20 @@
                     <div class="form-group row">
                         <h3>Welcome to</h3>
                         <h1>Short <span>URL</span></h1>
-                        <h5>Total URL Clicks: <span class="text_num"><?php echo($urlscount) ?></span></h5>
+                        <h5>Total URL Clicks: <span class="text_num"><?php echo ($urlscount) ?></span></h5>
                         <label>Copy the shortened link and share other locations.</label>
                         <input type="text" id="formurl" name="url" class="form-control" value="<?= esc($urls) ?>" disabled>
                         <input onclick="copyurls()" class="btn btn-primary col-2" type="button" value="Copy !">
                         <div class="row mt-2">
-                            <div class="col-2"> <h6>Full URL :</h6></div>
-                            <div class="col-10"><a href="<?php echo($fullurl) ?>" target="_blank"><?php echo($fullurl) ?></a></div>
+                            <div class="col-2">
+                                <h6>Full URL :</h6>
+                            </div>
+                            <div class="col-10"><a href="<?php echo ($fullurl) ?>" target="_blank"><?php echo ($fullurl) ?></a></div>
                         </div>
-                        <a target="_blank" href="/history"><input class="btn btn-qr text-white mt-3 col-3" type="button" value="History"></a>
+                        <div class="row">
+                            <a class="col-2" target="_blank" href="/history"><input class="btn btn-qr text-white mt-3 col-3" style="width: 100%;" type="button" value="History"></a>
+                            <a class="col-4" target="_blank" href="/qrcodetext"><input class="btn btn-qr text-white mt-3 col-3" style="width: 100%;" type="button" value="Genarate QR Code"></a>
+                        </div>
                     </div>
                 </form>
             </div>
